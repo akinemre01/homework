@@ -1,0 +1,73 @@
+students = ['Emre', 'Yusuf', 'Burak']
+courses = ['R', 'Python', 'C', 'Matlab', 'VBA']
+check = 1
+for i in range(3):
+    name = input('Enter Name & Surname:')
+    if name in students:
+        print('Welcome')
+        break
+else:
+    print('Please try again later.')
+    check = 0
+
+coursesst = []
+if check == 1:
+    print('Enter the name of courses')
+    coursesst = [
+        input('Course 1: '),
+        input('Course 2: '),
+        input('Course 3: '),
+        input('Course 4: '),
+        input('Course 5: ')
+    ]
+x = 0
+
+for i in range(len(coursesst)):
+    
+    if (coursesst[i] == ''):
+        x= x+1
+        
+if x >= 3:
+  print('You failed in class')
+  check = 0
+
+emre = {"mid": 53, "final": 76, "project": 37}
+yusuf = {"mid": 0, "final": 32, "project": 24}
+burak = {"mid": 95, "final": 90, "project": 100}
+
+re = 0
+ry = 0
+rb = 0
+
+if check == 1:
+    while True:
+        score = str(input('Choose the course to learn your score: '))
+        if name == "Emre" and score == "R":
+            re = emre["mid"] * 0.3 + emre["final"] * 0.5 + emre[
+                "project"] * 0.2
+            False
+            break
+        elif name == "Yusuf" and score == "R":
+            ry = yusuf["mid"] * 0.3 + yusuf["final"] * 0.5 + yusuf[
+                "project"] * 0.2
+            False
+            break
+        elif name == "Burak" and score == "R":
+            rb = burak["mid"] * 0.3 + burak["final"] * 0.5 + burak[
+                "project"] * 0.2
+            False
+            break
+        else:
+            print('Please enter a valid course name')
+
+if check == 1:
+    if re > 90 or ry > 90 or rb > 90:
+        print('Your score: AA')
+    elif 70 < re < 90 or 70 < ry < 90 or 70 < rb < 90:
+        print('Your score: BB')
+    elif 50 < re < 70 or 50 < ry < 70 or 50 < rb < 70:
+        print('Your score: CC')
+    elif 30 < re < 50 or 30 < ry < 50 or 30 < rb < 50:
+        print('Your score: DD')
+    else:
+        print('Your score: FF and  YOU FAILED IN COURSE')
